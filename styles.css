@@ -133,33 +133,104 @@ body {
 
 /* Pain Points Section */
 .pain-points-section {
-  padding: 50px 0;
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--bg-warm) 0%, #fff 100%);
 }
 
-.bg-primary-gradient {
-  background: var(--primary-gradient);
+.pain-card {
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 106, 93, 0.1);
+  transition: all 0.3s ease;
 }
 
-.pain-item {
-  padding: 15px;
-  transition: transform 0.3s ease;
+.pain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(124, 106, 93, 0.12);
+  border-color: var(--accent-color);
 }
 
-.pain-item:hover {
-  transform: translateY(-3px);
+.pain-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-warm) 0%, rgba(196, 167, 125, 0.2) 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.pain-icon {
-  opacity: 0.9;
+.pain-icon-wrapper i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.pain-card:hover .pain-icon-wrapper {
+  background: var(--primary-color);
+}
+
+.pain-card:hover .pain-icon-wrapper i {
+  color: #fff;
+}
+
+.pain-card h6 {
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 /* Understanding Section */
 .understanding-section {
   padding: 80px 0;
+  background: var(--bg-light);
 }
 
 .understanding-card {
-  border-left: 4px solid var(--accent-color);
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(124, 106, 93, 0.1);
+  position: relative;
+}
+
+.understanding-inner {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--accent-color);
+  opacity: 0.3;
+  position: absolute;
+}
+
+.quote-mark-open {
+  top: -1.5rem;
+  left: -1rem;
+}
+
+.quote-mark-close {
+  bottom: -3rem;
+  right: -1rem;
+}
+
+.understanding-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.understanding-footer {
+  border-top: 1px solid rgba(124, 106, 93, 0.1);
+  padding-top: 1.5rem;
 }
 
 /* About Section */
@@ -428,45 +499,127 @@ body {
   transform: none;
 }
 
-/* CTA Section */
-.cta-section {
-  min-height: 600px;
-  display: flex;
-  align-items: center;
+/* Checkout Section */
+.checkout-section {
   padding: 100px 0;
+  background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);
 }
 
-.cta-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.checkout-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 80px rgba(124, 106, 93, 0.15);
+  overflow: hidden;
+}
+
+.checkout-product {
+  background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-cream) 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-accent {
+  background-color: var(--accent-color) !important;
+  color: #fff;
+}
+
+.product-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(124, 106, 93, 0.1);
+  color: var(--text-dark);
+}
+
+.product-features li:last-child {
+  border-bottom: none;
+}
+
+.product-features i {
+  color: var(--success-color);
+}
+
+.product-price {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--accent-color);
+}
+
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.price-amount .currency {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.price-amount .amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+.checkout-form-wrapper {
+  background: #fff;
+}
+
+.checkout-form .form-control {
+  border-radius: 0.75rem;
+  padding: 12px 16px;
+}
+
+.checkout-total {
+  background: var(--bg-light);
+  border: 1px solid rgba(124, 106, 93, 0.1);
+}
+
+.security-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+}
+
+.security-badge i {
+  color: var(--success-color);
+}
+
+.checkout-guarantee {
+  padding: 1rem 0;
+}
+
+/* Lead Magnet Section */
+.lead-magnet-section {
+  padding: 80px 0;
+  background: var(--bg-warm);
+}
+
+.lead-magnet-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 60px rgba(124, 106, 93, 0.12);
+  overflow: hidden;
+}
+
+.lead-magnet-benefits li {
+  padding: 6px 0;
+  color: var(--text-dark);
+}
+
+.lead-magnet-form .form-control {
+  border-radius: 0.75rem;
+  min-width: 250px;
+}
+
+.lead-magnet-image {
+  height: 100%;
+  min-height: 400px;
   background-size: cover;
   background-position: center;
-}
-
-.cta-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.cta-content {
-  position: relative;
-  z-index: 2;
-}
-
-.cta-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Final Message Section */
@@ -563,6 +716,10 @@ body {
   background-color: var(--bg-light) !important;
 }
 
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
 /* Rounded Corners */
 .rounded-4 {
   border-radius: 1rem !important;
@@ -601,6 +758,16 @@ body {
   }
 }
 
+@media (max-width: 991.98px) {
+  .checkout-product {
+    border-bottom: 1px solid rgba(124, 106, 93, 0.1);
+  }
+
+  .price-amount .amount {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .hero-section {
     padding: 60px 0 80px;
@@ -608,6 +775,18 @@ body {
 
   .hero-title {
     font-size: 1.9rem;
+  }
+
+  .checkout-section {
+    padding: 60px 0;
+  }
+
+  .understanding-quote {
+    font-size: 1.1rem;
+  }
+
+  .quote-mark {
+    font-size: 4rem;
   }
 
   .pain-points-section .col-12.col-md {
