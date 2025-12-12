@@ -631,6 +631,21 @@ body {
   background-position: center;
 }
 
+/* Form Checkbox Styling */
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.25rem rgba(129, 129, 193, 0.25);
+}
+
+.lead-magnet-form .form-control {
+  min-width: 150px;
+}
+
 /* Final Message Section */
 .final-message-section {
   padding: 60px 0;
