@@ -5,12 +5,12 @@
 
 /* Base Styles & Color Variables */
 :root {
-  --primary-color: #7c6a5d;
-  --primary-light: #a89385;
-  --primary-dark: #5d4e42;
-  --accent-color: #c4a77d;
-  --accent-warm: #d4a574;
-  --primary-gradient: linear-gradient(135deg, #7c6a5d 0%, #a89385 100%);
+  --primary-color: #8181c1;
+  --primary-light: #adade1;
+  --primary-dark: #6a6aa8;
+  --accent-color: #8181c1;
+  --accent-warm: #adade1;
+  --primary-gradient: linear-gradient(135deg, #8181c1 0%, #adade1 100%);
   --text-dark: #3d3d3d;
   --text-muted: #6b6b6b;
   --bg-light: #faf8f5;
@@ -37,16 +37,16 @@ body {
 
 /* Brand Text */
 .brand-text {
-  color: var(--primary-dark);
+  color: var(--text-dark);
 }
 
 .brand-accent {
-  color: var(--accent-color);
+  color: var(--primary-color);
   font-weight: 400;
 }
 
 .text-accent {
-  color: var(--accent-warm);
+  color: var(--primary-color);
 }
 
 /* Navigation */
@@ -490,12 +490,12 @@ body {
 }
 
 .accordion-button::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237c6a5d'%3e%3cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238181c1'%3e%3cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3e%3c/svg%3e");
   transition: transform 0.3s ease;
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%237c6a5d'%3e%3cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238181c1'%3e%3cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3e%3c/svg%3e");
   transform: none;
 }
 
@@ -563,6 +563,15 @@ body {
   line-height: 1;
 }
 
+.price-amount .original-price {
+  font-size: 1.1rem;
+}
+
+.early-bird-badge .badge {
+  font-size: 0.85rem;
+  padding: 0.5em 1em;
+}
+
 .checkout-form-wrapper {
   background: #fff;
 }
@@ -574,7 +583,7 @@ body {
 
 .checkout-total {
   background: var(--bg-light);
-  border: 1px solid rgba(124, 106, 93, 0.1);
+  border: 1px solid rgba(129, 129, 193, 0.2);
 }
 
 .security-badge {
