@@ -173,10 +173,18 @@ body {
   position: relative;
 }
 
+.about-image {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .about-image-wrapper .image-accent {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 600px;
   background: var(--accent-color);
   border-radius: 1rem;
   top: 20px;
@@ -204,11 +212,16 @@ body {
   padding: 100px 0;
 }
 
-.program-section img {
+.program-image {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transition: transform 0.3s ease;
 }
 
-.program-section img:hover {
+.program-image:hover {
   transform: scale(1.02);
 }
 
@@ -255,6 +268,14 @@ body {
 /* How It Works Section */
 .how-it-works-section {
   padding: 100px 0;
+}
+
+.how-it-works-image {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .step-item {
@@ -509,6 +530,16 @@ body {
   .about-image-wrapper .image-accent {
     display: none;
   }
+
+  .about-image,
+  .about-image-wrapper .image-accent {
+    height: 450px;
+  }
+
+  .program-image,
+  .how-it-works-image {
+    height: 450px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -538,6 +569,12 @@ body {
 
   .step-item:not(:last-child)::after {
     display: none;
+  }
+
+  .about-image,
+  .program-image,
+  .how-it-works-image {
+    height: 350px;
   }
 
   .display-5 {
