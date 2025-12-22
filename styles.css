@@ -5,22 +5,38 @@
 
 /* Base Styles & Color Variables */
 :root {
-  --primary-color: #5FD954;
-  --primary-light: #8FE686;
-  --primary-dark: #4AB83F;
-  --accent-color: #EABB6B;
-  --accent-warm: #EDD6A1;
-  --primary-gradient: linear-gradient(135deg, #5FD954 0%, #A1EDBC 100%);
-  --accent-gradient: linear-gradient(315deg, #EABB6B 0%, #EDD6A1 100%);
-  --text-dark: #2d3436;
-  --text-muted: #636e72;
-  --bg-light: #f8fdf8;
-  --bg-cream: #fffef9;
-  --bg-warm: #fff9f0;
-  --bg-green-light: linear-gradient(135deg, rgba(95, 217, 84, 0.08) 0%, rgba(161, 237, 188, 0.08) 100%);
-  --bg-peach-light: linear-gradient(315deg, rgba(234, 187, 107, 0.08) 0%, rgba(237, 214, 161, 0.08) 100%);
-  --success-color: #5FD954;
-  --danger-color: #e17055;
+  /* Primary - Soft Teal (calm, clarity, trust) */
+  --primary-color: #4A9B9B;
+  --primary-light: #6FB3B3;
+  --primary-dark: #3A7D7D;
+
+  /* Accent - Warm Terracotta (nurturing, warmth) */
+  --accent-color: #D9826B;
+  --accent-light: #E5A391;
+  --accent-dark: #C06B54;
+
+  /* Supporting - Sage Green (growth, harmony) */
+  --sage-color: #8FA885;
+  --sage-light: #A8BCA0;
+  --sage-dark: #738F6A;
+
+  /* Gradients */
+  --primary-gradient: linear-gradient(135deg, #4A9B9B 0%, #6FB3B3 100%);
+  --accent-gradient: linear-gradient(135deg, #D9826B 0%, #E5A391 100%);
+  --soft-gradient: linear-gradient(135deg, rgba(74, 155, 155, 0.08) 0%, rgba(111, 179, 179, 0.05) 100%);
+  --warm-gradient: linear-gradient(135deg, rgba(217, 130, 107, 0.08) 0%, rgba(229, 163, 145, 0.05) 100%);
+
+  /* Neutrals */
+  --text-dark: #3A3A3A;
+  --text-muted: #6B6B6B;
+  --bg-cream: #FBF8F3;
+  --bg-warm: #F5F1EC;
+  --bg-light: #FAFAFA;
+  --bg-white: #FFFFFF;
+
+  /* Semantic Colors */
+  --success-color: #8FA885;
+  --danger-color: #D9826B;
 }
 
 body {
@@ -90,7 +106,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #5FD954 0%, #A1EDBC 33%, #fdfbf7 84%);
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-white) 100%);
   padding: 100px 0 120px;
   position: relative;
 }
@@ -100,22 +116,16 @@ body {
 }
 
 .hero-tagline {
-  color: var(--text-dark);
+  color: var(--primary-color);
   font-size: 0.75rem;
   font-weight: 600;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .hero-title {
   font-family: 'Playfair Display', serif;
   color: var(--text-dark);
   line-height: 1.2;
-}
-
-.hero-emphasis {
-  font-size: 1.25rem;
-  color: var(--text-dark);
-  font-weight: 500;
 }
 
 .section-label {
@@ -126,6 +136,7 @@ body {
 .hero-image {
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 1rem;
 }
 
 .hero-image:hover {
@@ -145,65 +156,71 @@ body {
 .floating-shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
-  background: var(--primary-color);
+  opacity: 0.06;
+  background: var(--primary-gradient);
 }
 
 .shape-1 {
-  width: 300px;
-  height: 300px;
-  top: -100px;
-  right: -50px;
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  right: -100px;
 }
 
 .shape-2 {
-  width: 200px;
-  height: 200px;
-  bottom: 10%;
-  left: 5%;
+  width: 250px;
+  height: 250px;
+  bottom: -50px;
+  left: -50px;
 }
 
 .shape-3 {
-  width: 150px;
-  height: 150px;
-  top: 30%;
-  left: 10%;
+  width: 180px;
+  height: 180px;
+  top: 40%;
+  right: 15%;
 }
 
 /* Pain Points Section */
 .pain-points-section {
   padding: 100px 0;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .pain-card {
-  background: #fff;
+  background: var(--bg-white);
   border-radius: 1rem;
-  border: 2px solid rgba(95, 217, 84, 0.2);
+  border: 2px solid rgba(74, 155, 155, 0.15);
   transition: all 0.3s ease;
 }
 
 .pain-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(95, 217, 84, 0.15);
+  box-shadow: 0 20px 50px rgba(74, 155, 155, 0.12);
   border-color: var(--primary-color);
-  background: linear-gradient(135deg, rgba(95, 217, 84, 0.03) 0%, rgba(161, 237, 188, 0.05) 100%);
+  background: var(--soft-gradient);
 }
 
 .pain-connection-card {
-  background: linear-gradient(135deg, #5FD954 0%, #A1EDBC 100%);
-  color: var(--text-dark);
-  box-shadow: 0 20px 60px rgba(95, 217, 84, 0.25);
+  background: var(--primary-gradient);
+  color: var(--bg-white);
+  box-shadow: 0 25px 60px rgba(74, 155, 155, 0.2);
   transition: all 0.3s ease;
 }
 
 .pain-connection-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 25px 70px rgba(95, 217, 84, 0.3);
+  box-shadow: 0 30px 70px rgba(74, 155, 155, 0.25);
+}
+
+.pain-connection-card h4,
+.pain-connection-card p,
+.pain-connection-card strong {
+  color: var(--bg-white);
 }
 
 .connection-icon i {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .pain-icon-wrapper {
@@ -213,7 +230,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(95, 217, 84, 0.15) 0%, rgba(161, 237, 188, 0.15) 100%);
+  background: rgba(74, 155, 155, 0.08);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
@@ -229,7 +246,7 @@ body {
 }
 
 .pain-card:hover .pain-icon-wrapper i {
-  color: #fff;
+  color: var(--bg-white);
 }
 
 .pain-card h6 {
@@ -240,7 +257,7 @@ body {
 /* Understanding Section */
 .understanding-section {
   padding: 100px 0;
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.08) 0%, rgba(237, 214, 161, 0.08) 100%);
+  background: var(--soft-gradient);
 }
 
 .understanding-card {
@@ -294,7 +311,7 @@ body {
 .about-section {
   padding: 100px 0;
   position: relative;
-  background: linear-gradient(135deg, rgba(95, 217, 84, 0.05) 0%, rgba(161, 237, 188, 0.05) 100%);
+  background: var(--bg-white);
 }
 
 .about-image-wrapper {
@@ -360,7 +377,7 @@ body {
 /* Problem Deep Dive Section */
 .problem-section {
   padding: 100px 0;
-  background: #fff;
+  background: var(--bg-cream);
 }
 
 .problem-card {
@@ -391,7 +408,7 @@ body {
 /* Audience Section */
 .audience-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, rgba(95, 217, 84, 0.06) 0%, rgba(161, 237, 188, 0.06) 100%);
+  background: var(--warm-gradient);
 }
 
 .audience-list {
@@ -484,7 +501,7 @@ body {
 /* Clarity Section (What this is/isn't) */
 .clarity-section {
   padding: 100px 0;
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.06) 0%, rgba(237, 214, 161, 0.06) 100%);
+  background: var(--soft-gradient);
 }
 
 .clarity-card {
@@ -520,7 +537,7 @@ body {
 /* Outcomes Section */
 .outcomes-section {
   padding: 100px 0;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .outcome-item {
@@ -537,7 +554,7 @@ body {
 /* FAQ Section */
 .faq-section {
   padding: 100px 0;
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.06) 0%, rgba(237, 214, 161, 0.06) 100%);
+  background: var(--bg-cream);
 }
 
 .accordion-button:not(.collapsed) {
@@ -564,7 +581,7 @@ body {
 /* Checkout Section */
 .checkout-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, rgba(95, 217, 84, 0.08) 0%, rgba(161, 237, 188, 0.08) 100%);
+  background: var(--soft-gradient);
 }
 
 .checkout-card {
@@ -575,7 +592,7 @@ body {
 }
 
 .checkout-product {
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.15) 0%, rgba(237, 214, 161, 0.15) 100%);
+  background: var(--warm-gradient);
   display: flex;
   flex-direction: column;
 }
@@ -666,7 +683,7 @@ body {
 /* Lead Magnet Section */
 .lead-magnet-section {
   padding: 100px 0;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .lead-magnet-card {
@@ -711,7 +728,7 @@ body {
 /* Final Message Section */
 .final-message-section {
   padding: 80px 0;
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.08) 0%, rgba(237, 214, 161, 0.08) 100%);
+  background: var(--bg-cream);
 }
 
 /* Footer */
@@ -984,17 +1001,17 @@ input:focus {
 /* Methodology Section */
 .methodology-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, rgba(95, 217, 84, 0.06) 0%, rgba(161, 237, 188, 0.06) 100%);
+  background: var(--warm-gradient);
 }
 
 .methodology-card {
-  border: 2px solid rgba(95, 217, 84, 0.15);
+  border: 2px solid rgba(74, 155, 155, 0.12);
   transition: all 0.3s ease;
 }
 
 .methodology-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(95, 217, 84, 0.2);
+  box-shadow: 0 20px 50px rgba(74, 155, 155, 0.15);
   border-color: var(--primary-color);
 }
 
@@ -1003,14 +1020,14 @@ input:focus {
 }
 
 .research-note {
-  background: #fff;
-  border-color: var(--accent-color) !important;
+  background: var(--bg-white);
+  border-color: var(--sage-color) !important;
 }
 
 /* Timeline Section */
 .timeline-section {
   padding: 100px 0;
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.08) 0%, rgba(237, 214, 161, 0.08) 100%);
+  background: var(--soft-gradient);
 }
 
 .timeline-dot {
@@ -1039,13 +1056,13 @@ input:focus {
 /* Stakes Section */
 .stakes-section {
   padding: 100px 0;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .stakes-card {
-  background: linear-gradient(315deg, rgba(234, 187, 107, 0.12) 0%, rgba(237, 214, 161, 0.12) 100%);
+  background: var(--warm-gradient);
   border-left: 4px solid var(--accent-color);
-  box-shadow: 0 15px 40px rgba(234, 187, 107, 0.15);
+  box-shadow: 0 20px 50px rgba(217, 130, 107, 0.12);
   border-radius: 1rem;
 }
 
