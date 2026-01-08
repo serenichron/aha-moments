@@ -27,7 +27,7 @@
   --primary-gradient-bg: linear-gradient(135deg, #00b189 0%, #137861 100%);
 
   /* Type 2: Image overlay gradient (10% opacity) */
-  --image-overlay-gradient: linear-gradient(135deg, rgba(0, 177, 137, 0.9) 0%, rgba(19, 120, 97, 0.9) 100%);
+  --image-overlay-gradient: linear-gradient(135deg, rgba(0, 177, 137, 0.1) 0%, rgba(19, 120, 97, 0.1) 100%);
 
   /* Type 3: Light gradient */
   --light-gradient: linear-gradient(135deg, #c1f4e9 0%, #eaf0ef 100%);
@@ -156,7 +156,7 @@ p, li {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--image-overlay-gradient);
+  background: linear-gradient(135deg, rgba(0, 177, 137, 0.75) 0%, rgba(19, 120, 97, 0.75) 100%);
   z-index: 1;
 }
 
