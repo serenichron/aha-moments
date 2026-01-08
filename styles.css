@@ -363,7 +363,7 @@ p, li {
 /* Understanding Section */
 .understanding-section {
   padding: var(--section-padding) 0;
-  background: var(--soft-gradient);
+  background: var(--light-gradient);
 }
 
 .understanding-card {
@@ -684,7 +684,7 @@ p, li {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(61, 61, 61, 0.6);
+  background: var(--image-overlay-gradient);
 }
 
 .parallax-content {
@@ -726,7 +726,7 @@ p, li {
 /* Clarity Section (What this is/isn't) */
 .clarity-section {
   padding: var(--section-padding) 0;
-  background: var(--soft-gradient);
+  background: var(--light-gradient);
 }
 
 .clarity-card {
@@ -784,7 +784,7 @@ p, li {
 /* FAQ Section */
 .faq-section {
   padding: var(--section-padding) 0;
-  background: var(--bg-cream);
+  background: var(--bg-white);
 }
 
 .accordion-button:not(.collapsed) {
@@ -811,7 +811,7 @@ p, li {
 /* Checkout Section */
 .checkout-section {
   padding: var(--section-padding) 0;
-  background: var(--soft-gradient);
+  background: var(--light-gradient);
 }
 
 .checkout-card {
@@ -822,7 +822,7 @@ p, li {
 }
 
 .checkout-product {
-  background: var(--warm-gradient);
+  background: var(--light-gradient);
   display: flex;
   flex-direction: column;
 }
@@ -958,7 +958,7 @@ p, li {
 /* Final Message Section */
 .final-message-section {
   padding: 80px 0;
-  background: var(--bg-cream);
+  background: var(--light-gradient);
 }
 
 /* Footer */
@@ -1239,7 +1239,7 @@ input:focus {
 /* Methodology Section */
 .methodology-section {
   padding: var(--section-padding) 0;
-  background: var(--warm-gradient);
+  background: var(--light-gradient);
 }
 
 .methodology-card {
