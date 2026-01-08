@@ -6,43 +6,58 @@
 
 /* Base Styles & Color Variables */
 :root {
-  /* Primary - Soft Teal (calm, clarity, trust) */
-  --primary-color: #4A9B9B;
-  --primary-light: #6FB3B3;
-  --primary-dark: #3A7D7D;
+  /* Primary - Fresh Teal (energy, growth, trust) */
+  --primary-color: #00b189;
+  --primary-light: #00d9a3;
+  --primary-dark: #137861;
 
-  /* Accent - Warm Terracotta (nurturing, warmth) */
-  --accent-color: #D9826B;
-  --accent-light: #E5A391;
-  --accent-dark: #C06B54;
+  /* Accent - Complementary Coral */
+  --accent-color: #ff6b6b;
+  --accent-light: #ff8787;
+  --accent-dark: #ee5a52;
 
-  /* Supporting - Sage Green (growth, harmony) */
-  --sage-color: #8FA885;
-  --sage-light: #A8BCA0;
-  --sage-dark: #738F6A;
+  /* Supporting - Deep Teal */
+  --sage-color: #00b189;
+  --sage-light: #00d9a3;
+  --sage-dark: #137861;
 
-  /* Gradients */
-  --primary-gradient: linear-gradient(135deg, #4A9B9B 0%, #6FB3B3 100%);
-  --accent-gradient: linear-gradient(135deg, #D9826B 0%, #E5A391 100%);
-  --soft-gradient: linear-gradient(135deg, rgba(74, 155, 155, 0.08) 0%, rgba(111, 179, 179, 0.04) 100%);
-  --warm-gradient: linear-gradient(135deg, rgba(217, 130, 107, 0.08) 0%, rgba(229, 163, 145, 0.04) 100%);
+  /* Background Gradients - 5 Types */
+  /* Type 1: Dark gradient */
+  --primary-gradient: linear-gradient(135deg, #00b189 0%, #137861 100%);
+  --primary-gradient-bg: linear-gradient(135deg, #00b189 0%, #137861 100%);
+
+  /* Type 2: Image overlay gradient (10% opacity) */
+  --image-overlay-gradient: linear-gradient(135deg, rgba(0, 177, 137, 0.9) 0%, rgba(19, 120, 97, 0.9) 100%);
+
+  /* Type 3: Light gradient */
+  --light-gradient: linear-gradient(135deg, #c1f4e9 0%, #eaf0ef 100%);
+  --soft-gradient: linear-gradient(135deg, #c1f4e9 0%, #eaf0ef 100%);
+
+  /* Type 4: Image with light overlay (10% opacity) */
+  --image-light-overlay: linear-gradient(135deg, rgba(193, 244, 233, 0.9) 0%, rgba(234, 240, 239, 0.9) 100%);
+
+  /* Type 5: White */
+  --bg-white: #FFFFFF;
+
+  /* Legacy gradient support */
+  --accent-gradient: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+  --warm-gradient: linear-gradient(135deg, #c1f4e9 0%, #eaf0ef 100%);
 
   /* Neutrals */
-  --text-dark: #3A3A3A;
-  --text-muted: #6B6B6B;
-  --bg-cream: #FBF8F3;
-  --bg-warm: #F5F1EC;
-  --bg-light: #FAFAFA;
-  --bg-white: #FFFFFF;
-  --bg-teal-ultra-light: rgba(74, 155, 155, 0.03);
+  --text-dark: #2d3748;
+  --text-muted: #718096;
+  --bg-cream: #f7fafc;
+  --bg-warm: #eaf0ef;
+  --bg-light: #f7fafc;
+  --bg-teal-ultra-light: rgba(0, 177, 137, 0.05);
 
   /* Semantic Colors */
-  --success-color: #8FA885;
-  --danger-color: #D9826B;
+  --success-color: #00b189;
+  --danger-color: #ff6b6b;
 
   /* Spacing */
   --section-padding: 120px;
-  --card-radius: 0.5rem;
+  --card-radius: 0.75rem;
 }
 
 body {
@@ -119,11 +134,35 @@ p, li {
   border-radius: 50px;
 }
 
-/* Hero Section */
+/* Hero Section - Background Image with Overlay */
 .hero-section {
-  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-white) 100%);
-  padding: 120px 0 140px;
+  background-image:
+    var(--image-light-overlay),
+    url('https://growingfaith.com.au/images/made/images/uploads/parenting_stages_682_682_340_int_c1_c_c__1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 140px 0 160px;
   position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--image-light-overlay);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .min-vh-75 {
@@ -214,6 +253,41 @@ p, li {
   background: var(--bg-white);
 }
 
+.pain-points-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pain-point-item {
+  padding: 1.25rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.pain-point-item:hover {
+  transform: translateX(8px);
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pain-point-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pain-point-icon i {
+  font-size: 1.25rem;
+  color: white;
+}
+
 .pain-card {
   background: var(--bg-white);
   border-radius: var(--card-radius);
@@ -260,7 +334,7 @@ p, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(74, 155, 155, 0.08);
+  background: rgba(0, 177, 137, 0.1);
   border-radius: 50%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -377,11 +451,11 @@ p, li {
 }
 
 .bg-soft-primary {
-  background-color: rgba(124, 106, 93, 0.08) !important;
+  background-color: rgba(0, 177, 137, 0.08) !important;
 }
 
 .badge.bg-soft-primary {
-  background-color: rgba(124, 106, 93, 0.12) !important;
+  background-color: rgba(0, 177, 137, 0.12) !important;
 }
 
 /* Program Section */
@@ -406,10 +480,129 @@ p, li {
   font-size: 1.2rem;
 }
 
-/* Problem Deep Dive Section */
+/* Problem Cycle Section */
 .problem-section {
   padding: var(--section-padding) 0;
-  background: var(--bg-cream);
+  background: var(--light-gradient);
+}
+
+.problem-cycle-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.cycle-item {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cycle-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color);
+}
+
+.cycle-number {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto 1rem;
+}
+
+.cycle-arrow {
+  position: absolute;
+  color: var(--primary-color);
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.cycle-arrow-1 {
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cycle-arrow-2 {
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cycle-arrow-3 {
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.cycle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba(0, 177, 137, 0.1);
+  color: var(--primary-color);
+  z-index: 2;
+}
+
+.breakthrough-card {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.breakthrough-card h4,
+.breakthrough-card p {
+  color: white;
+}
+
+@media (max-width: 991.98px) {
+  .problem-cycle-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .cycle-arrow-1,
+  .cycle-arrow-2 {
+    right: auto;
+    top: auto;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .cycle-arrow-3 {
+    display: none;
+  }
+
+  .cycle-center {
+    position: static;
+    margin: 2rem auto;
+    transform: none;
+  }
 }
 
 .problem-card {
@@ -606,12 +799,12 @@ p, li {
 }
 
 .accordion-button::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238181c1'%3e%3cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300b189'%3e%3cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3e%3c/svg%3e");
   transition: transform 0.3s ease;
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238181c1'%3e%3cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300b189'%3e%3cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3e%3c/svg%3e");
   transform: none;
 }
 
@@ -699,7 +892,7 @@ p, li {
 
 .checkout-total {
   background: var(--bg-light);
-  border: 1px solid rgba(129, 129, 193, 0.2);
+  border: 1px solid rgba(0, 177, 137, 0.2);
 }
 
 .security-badge {
@@ -755,7 +948,7 @@ p, li {
 
 .form-check-input:focus {
   border-color: var(--primary-light);
-  box-shadow: 0 0 0 0.25rem rgba(129, 129, 193, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 177, 137, 0.25);
 }
 
 .lead-magnet-form .form-control {
@@ -808,13 +1001,13 @@ p, li {
 .btn-primary:first-child:active {
   background-color: var(--primary-dark) !important;
   border-color: var(--primary-dark) !important;
-  box-shadow: 0 0 0 0.25rem rgba(74, 155, 155, 0.25) !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 177, 137, 0.25) !important;
 }
 
 .btn-outline-primary {
   border-color: var(--primary-color);
   color: var(--primary-color);
-  background: rgba(74, 155, 155, 0.05);
+  background: rgba(0, 177, 137, 0.05);
   border-width: 2px;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -837,7 +1030,7 @@ p, li {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
   color: #fff !important;
-  box-shadow: 0 0 0 0.25rem rgba(74, 155, 155, 0.25) !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 177, 137, 0.25) !important;
 }
 
 .btn-lg {
@@ -849,15 +1042,15 @@ p, li {
 .form-control {
   border-radius: 8px;
   padding: 16px 20px;
-  border: 2px solid rgba(74, 155, 155, 0.15);
-  background: rgba(74, 155, 155, 0.02);
+  border: 2px solid rgba(0, 177, 137, 0.15);
+  background: rgba(0, 177, 137, 0.02);
   transition: all 0.3s ease;
   font-size: 1rem;
 }
 
 .form-control:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px rgba(0, 177, 137, 0.1);
   background: #fff;
   outline: none;
 }
