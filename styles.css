@@ -379,50 +379,59 @@ p, li {
   background: var(--light-gradient);
 }
 
+.understanding-visual {
+  background: white;
+  border-radius: var(--card-radius);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.emotion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.emotion-icon i {
+  transition: all 0.3s ease;
+}
+
+.understanding-visual:hover .emotion-icon i:first-child {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.understanding-visual:hover .emotion-icon i:last-child {
+  transform: scale(1.2);
+}
+
 .understanding-card {
   background: #fff;
-  border-radius: 1.5rem;
-  padding: 3rem;
-  box-shadow: 0 20px 60px rgba(124, 106, 93, 0.1);
-  position: relative;
+  border-radius: var(--card-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.understanding-inner {
-  position: relative;
-  padding: 0 2rem;
-}
-
-.quote-mark {
+.quote-mark-small {
   font-family: 'Playfair Display', serif;
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 1;
-  color: var(--accent-color);
+  color: var(--primary-color);
   opacity: 0.3;
-  position: absolute;
 }
 
-.quote-mark-open {
-  top: -1.5rem;
-  left: -1rem;
-}
-
-.quote-mark-close {
-  bottom: -3rem;
-  right: -1rem;
-}
-
-.understanding-quote {
+.understanding-quote-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-dark);
   font-style: italic;
-  text-align: center;
-  margin: 0;
 }
 
 .understanding-footer {
-  border-top: 1px solid rgba(124, 106, 93, 0.1);
+  border-top: 2px solid var(--primary-color);
   padding-top: 1.5rem;
 }
 
@@ -709,31 +718,54 @@ p, li {
   z-index: 2;
 }
 
-/* How It Works Section */
+/* How It Works Section - Zig-Zag Layout */
 .how-it-works-section {
-  padding: 100px 0;
+  padding: var(--section-padding) 0;
+  background: var(--bg-white);
 }
 
-.how-it-works-image {
-  height: 600px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.step-item {
+.zigzag-steps {
   position: relative;
 }
 
-.step-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 25px;
-  top: 60px;
-  bottom: -20px;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--primary-color) 0%, transparent 100%);
+.step-row {
+  position: relative;
+}
+
+.step-number-badge {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 177, 137, 0.3);
+}
+
+.step-visual {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.step-row:hover .step-visual {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-visual i {
+  transition: all 0.3s ease;
+}
+
+.step-row:hover .step-visual i {
+  transform: scale(1.1);
 }
 
 /* Clarity Section (What this is/isn't) */
@@ -1279,6 +1311,14 @@ input:focus {
   background: white;
 }
 
+.methodology-card h5,
+.methodology-card p,
+.methodology-card .small,
+.methodology-card .text-muted,
+.methodology-card strong {
+  color: var(--text-dark) !important;
+}
+
 .methodology-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -1297,7 +1337,18 @@ input:focus {
 
 .research-note {
   background: var(--bg-white);
-  border-color: var(--sage-color) !important;
+  border-color: white !important;
+}
+
+.research-note p,
+.research-note strong,
+.research-note .small,
+.research-note i {
+  color: var(--text-dark) !important;
+}
+
+.research-note i.text-primary {
+  color: var(--primary-color) !important;
 }
 
 /* Timeline Section */
@@ -1471,6 +1522,126 @@ input:focus {
   transform: translateY(-3px);
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
   border-color: var(--accent-color);
+}
+
+/* Certification Cards - About Liana */
+.certification-card {
+  background: var(--light-gradient);
+  border: 2px solid rgba(0, 177, 137, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color);
+  background: white;
+}
+
+.cert-icon {
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover .cert-icon i {
+  transform: scale(1.15);
+}
+
+.certification-card h6 {
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Clarity Card Variants - What This Is/Isn't */
+.clarity-card-elevated {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+  border: 2px solid rgba(0, 177, 137, 0.2) !important;
+  background: linear-gradient(135deg, #fff 0%, rgba(0, 177, 137, 0.02) 100%) !important;
+}
+
+.clarity-card-elevated:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.clarity-card-flat {
+  box-shadow: none !important;
+  border: 2px solid rgba(255, 107, 107, 0.2) !important;
+  background: rgba(255, 107, 107, 0.03) !important;
+}
+
+.clarity-card-flat:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: var(--danger-color) !important;
+}
+
+/* Outcome Items - Immediate vs Long-term */
+.outcome-category {
+  position: relative;
+}
+
+.outcome-item-immediate {
+  border-left: 4px solid var(--primary-color);
+  background: linear-gradient(135deg, #fff 0%, rgba(0, 177, 137, 0.03) 100%);
+}
+
+.outcome-item-immediate:hover {
+  border-left-color: var(--primary-dark);
+}
+
+.outcome-item-longterm {
+  border-left: 4px solid #718096;
+  background: linear-gradient(135deg, #fff 0%, rgba(113, 128, 150, 0.03) 100%);
+}
+
+.outcome-item-longterm:hover {
+  border-left-color: #4a5568;
+}
+
+.bg-soft-secondary {
+  background-color: rgba(113, 128, 150, 0.08) !important;
+}
+
+.badge.bg-soft-secondary {
+  background-color: rgba(113, 128, 150, 0.12) !important;
+}
+
+.text-secondary {
+  color: #718096 !important;
+}
+
+/* Method List - Bullet Points in Methodology Cards */
+.method-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.method-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.method-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.methodology-card .method-list li {
+  color: var(--text-dark) !important;
+}
+
+.methodology-card .method-list li::before {
+  color: var(--primary-color) !important;
 }
 
 /* Print Styles */
