@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout - Aha Moments cu Liana</title>
 
-  <!-- Bootstrap 5.3.8 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -21,96 +15,91 @@
 
   <!-- Checkout Card -->
   <div class="checkout-card">
-            <div class="row g-0">
-              <!-- Product Summary -->
-              <div class="col-lg-5">
-                <div class="checkout-product p-4 p-lg-5 h-100">
-                  <div class="product-badge mb-3">
-                    <span class="badge bg-accent">Program Complet</span>
-                  </div>
-                  <h3 class="serif-font mb-3">Intervenție Scurtă pentru Părinți</h3>
-                  <ul class="product-features list-unstyled mb-4">
-                    <li><i class="bi bi-check2 me-2"></i> 2 ședințe individuale online (60 min)</li>
-                    <li><i class="bi bi-check2 me-2"></i> Formular de intake detaliat</li>
-                    <li><i class="bi bi-check2 me-2"></i> Plan personalizat de intervenție (PDF)</li>
-                    <li><i class="bi bi-check2 me-2"></i> Analiza comportamentului țintă</li>
-                    <li><i class="bi bi-check2 me-2"></i> Strategii concrete de schimbare</li>
-                    <li><i class="bi bi-check2 me-2"></i> Ghid de implementare și monitorizare</li>
-                  </ul>
-                  <div class="product-price mt-auto">
-                    <div class="early-bird-badge mb-2">
-                      <span class="badge bg-danger"><i class="bi bi-lightning-fill me-1"></i>Early Bird -90%</span>
-                    </div>
-                    <div class="price-amount">
-                      <span class="original-price text-muted text-decoration-line-through me-2">1000 RON</span>
-                      <span class="amount">100 RON</span>
-                    </div>
-                    <p class="small text-muted mb-0">Ofertă limitată • Plată unică</p>
-                  </div>
-                </div>
+    <div class="checkout-grid">
+      <!-- Product Summary -->
+      <div class="checkout-product">
+        <div class="product-badge">
+          <span class="badge badge-orange">Program Complet</span>
+        </div>
+        <h3 class="product-title">Intervenție Scurtă pentru Părinți</h3>
+        <ul class="product-features">
+          <li><span class="check-icon">✓</span> 2 ședințe individuale online (60 min)</li>
+          <li><span class="check-icon">✓</span> Formular de intake detaliat</li>
+          <li><span class="check-icon">✓</span> Plan personalizat de intervenție (PDF)</li>
+          <li><span class="check-icon">✓</span> Analiza comportamentului țintă</li>
+          <li><span class="check-icon">✓</span> Strategii concrete de schimbare</li>
+          <li><span class="check-icon">✓</span> Ghid de implementare și monitorizare</li>
+        </ul>
+        <div class="product-price">
+          <div class="early-bird-badge">
+            <span class="badge badge-red">⚡ Early Bird -90%</span>
+          </div>
+          <div class="price-amount">
+            <span class="original-price">1000 RON</span>
+            <span class="amount">100 RON</span>
+          </div>
+          <p class="price-note">Ofertă limitată • Plată unică</p>
+        </div>
+      </div>
+
+      <!-- Checkout Form -->
+      <div class="checkout-form-wrapper">
+        <h5 class="form-title">Completează datele pentru rezervare</h5>
+        <form class="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Prenume</label>
+              <input type="text" class="form-control" placeholder="Maria" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nume</label>
+              <input type="text" class="form-control" placeholder="Popescu" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="maria@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telefon</label>
+            <input type="tel" class="form-control" placeholder="0740 123 456" required>
+          </div>
+
+          <div class="checkout-total">
+            <div class="total-row">
+              <div class="total-left">
+                <span class="total-label">Total de plată:</span>
+                <span class="badge badge-red badge-small">-90%</span>
               </div>
-              <!-- Checkout Form -->
-              <div class="col-lg-7">
-                <div class="checkout-form-wrapper p-4 p-lg-5">
-                  <h5 class="mb-4">Completează datele pentru rezervare</h5>
-                  <form class="checkout-form">
-                    <div class="row">
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label small text-muted">Prenume</label>
-                        <input type="text" class="form-control" placeholder="Maria" required>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label small text-muted">Nume</label>
-                        <input type="text" class="form-control" placeholder="Popescu" required>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label small text-muted">Email</label>
-                      <input type="email" class="form-control" placeholder="maria@email.com" required>
-                    </div>
-                    <div class="mb-4">
-                      <label class="form-label small text-muted">Telefon</label>
-                      <input type="tel" class="form-control" placeholder="0740 123 456" required>
-                    </div>
-
-                    <div class="checkout-total p-3 mb-4">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                          <span class="fw-medium">Total de plată:</span>
-                          <span class="badge bg-danger ms-2 small">-90%</span>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-muted text-decoration-line-through small me-2">1000 RON</span>
-                          <span class="fs-4 fw-bold text-primary">100 RON</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-check mb-3">
-                      <input class="form-check-input" type="checkbox" id="gdprConsentCheckout" required>
-                      <label class="form-check-label small text-muted" for="gdprConsentCheckout">
-                        Sunt de acord cu <a href="#" class="text-primary">Politica de confidențialitate</a> și accept prelucrarea datelor personale conform GDPR.
-                      </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
-                      <i class="bi bi-credit-card me-2"></i> Plătește cu cardul
-                    </button>
-
-                    <div class="checkout-security text-center">
-                      <div class="security-badges d-flex justify-content-center gap-3 mb-2">
-                        <span class="security-badge"><i class="bi bi-shield-lock me-1"></i> SSL Securizat</span>
-                        <span class="security-badge"><i class="bi bi-credit-card-2-front me-1"></i> Stripe</span>
-                      </div>
-                      <p class="small text-muted mb-0">Plată securizată. Datele tale sunt protejate.</p>
-                    </div>
-                  </form>
-                </div>
+              <div class="total-right">
+                <span class="total-old-price">1000 RON</span>
+                <span class="total-price">100 RON</span>
               </div>
             </div>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gdprConsent" required>
+            <label class="form-check-label" for="gdprConsent">
+              Sunt de acord cu <a href="#" class="link">Politica de confidențialitate</a> și accept prelucrarea datelor personale conform GDPR.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <span class="btn-icon">💳</span> Plătește cu cardul
+          </button>
+
+          <div class="checkout-security">
+            <div class="security-badges">
+              <span class="security-badge">🔒 SSL Securizat</span>
+              <span class="security-badge">💳 Stripe</span>
+            </div>
+            <p class="security-note">Plată securizată. Datele tale sunt protejate.</p>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
