@@ -32,7 +32,7 @@
   /* Spacing */
   --section-padding: 120px;
   --card-radius: 0;
-  --button-radius: 0.5rem;
+  --button-radius: 50px;
 }
 
 /* Base Styles */
@@ -172,6 +172,20 @@ body {
 
 .form-check-input {
   border-radius: 0;
+}
+
+/* Override Bootstrap Colors */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-dark);
 }
 
 .security-badge {
