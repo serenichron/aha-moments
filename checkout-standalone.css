@@ -70,6 +70,7 @@ body {
   background: #fff;
   border-radius: 0;
   box-shadow: -18px 18px 0 0 var(--shadow-color);
+  border: 1px solid #b7d3cc;
   overflow: hidden;
 }
 
@@ -153,7 +154,23 @@ body {
   border-radius: var(--button-radius);
 }
 
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
 .badge {
+  border-radius: 0;
+}
+
+.form-check-input {
   border-radius: 0;
 }
 
