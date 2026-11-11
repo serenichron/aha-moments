@@ -288,3 +288,22 @@ h1 em,h2 em{ font-weight:500; color:var(--green); }
 @media (prefers-reduced-motion:reduce){
   html{ scroll-behavior:auto; } .btn{ transition:none; } .btn:hover{ transform:none; }
 }
+
+/* ---------- splash variants: one per card, same two colours ---------- */
+.card:nth-child(1) .blob::before{ width:64px; height:60px; right:0; top:-4px; border-radius:62% 38% 46% 54% / 55% 48% 52% 45%; }
+.card:nth-child(1) .blob::after{ width:46px; height:44px; left:0; bottom:0; border-radius:40% 60% 55% 45% / 50% 40% 60% 50%; }
+
+.card:nth-child(2) .blob::before{ width:70px; height:50px; left:0; right:auto; top:18px; border-radius:50% 50% 40% 60% / 60% 45% 55% 40%; transform:rotate(-12deg); }
+.card:nth-child(2) .blob::after{ width:40px; height:40px; left:auto; right:0; bottom:0; border-radius:55% 45% 60% 40% / 45% 55% 45% 55%; }
+
+.card:nth-child(3) .blob::before{ width:52px; height:52px; right:auto; left:22px; top:-2px; border-radius:48% 52% 60% 40% / 40% 60% 40% 60%; }
+.card:nth-child(3) .blob::after{ width:72px; height:40px; left:0; bottom:6px; border-radius:60% 40% 50% 50% / 50% 60% 40% 50%; transform:rotate(8deg); }
+
+.card:nth-child(4) .blob::before{ width:48px; height:66px; right:6px; top:2px; border-radius:50% 50% 45% 55% / 40% 45% 55% 60%; transform:rotate(14deg); }
+.card:nth-child(4) .blob::after{ width:54px; height:42px; left:0; bottom:0; border-radius:65% 35% 55% 45% / 50% 55% 45% 50%; }
+
+.card:nth-child(5) .blob::before{ width:56px; height:48px; right:0; top:auto; bottom:2px; border-radius:42% 58% 50% 50% / 55% 45% 55% 45%; }
+.card:nth-child(5) .blob::after{ width:58px; height:54px; left:2px; bottom:auto; top:0; border-radius:55% 45% 42% 58% / 48% 58% 42% 52%; }
+
+.card:nth-child(6) .blob::before{ width:76px; height:44px; right:0; top:8px; border-radius:45% 55% 60% 40% / 60% 50% 50% 40%; transform:rotate(-18deg); }
+.card:nth-child(6) .blob::after{ width:44px; height:50px; left:8px; bottom:0; border-radius:50% 50% 38% 62% / 58% 42% 58% 42%; transform:rotate(10deg); }
