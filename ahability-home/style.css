@@ -307,3 +307,26 @@ h1 em,h2 em{ font-weight:500; color:var(--green); }
 
 .card:nth-child(6) .blob::before{ width:76px; height:44px; right:0; top:8px; border-radius:45% 55% 60% 40% / 60% 50% 50% 40%; transform:rotate(-18deg); }
 .card:nth-child(6) .blob::after{ width:44px; height:50px; left:8px; bottom:0; border-radius:50% 50% 38% 62% / 58% 42% 58% 42%; transform:rotate(10deg); }
+
+/* ---------- generated image assets (see ASSETS.md) ---------- */
+.logo .logo-mark{ width:auto; height:46px; flex:none; }
+.site-footer .logo .logo-mark{ height:50px; }
+
+/* hero photo fades into the page on its left edge, so only the right side is rounded */
+.hero-art{ border-radius:0 40px 40px 0; aspect-ratio:16/15; }
+
+/* watercolour splashes replace the CSS blobs */
+.blob{ width:96px; height:88px; background:center / 118% auto no-repeat; }
+.blob::before, .blob::after, .card:nth-child(n) .blob::before, .card:nth-child(n) .blob::after{ display:none; }
+.card:nth-child(1) .blob{ background-image:url(img/splash-1.webp); }
+.card:nth-child(2) .blob{ background-image:url(img/splash-2.webp); }
+.card:nth-child(3) .blob{ background-image:url(img/splash-3.webp); }
+.card:nth-child(4) .blob{ background-image:url(img/splash-4.webp); }
+.card:nth-child(5) .blob{ background-image:url(img/splash-5.webp); }
+.card:nth-child(6) .blob{ background-image:url(img/splash-6.webp); }
+.blob svg{ width:52px; height:52px; }
+
+/* soft green wash leading into the footer */
+.wash{ background:url(img/wash-wide.webp) center bottom / max(100%, 1200px) auto no-repeat; padding-bottom:clamp(120px, 16vw, 220px); }
+
+@media (max-width:940px){ .hero-art{ border-radius:28px; aspect-ratio:16/11; } .hero-art img{ object-position:70% 40%; } }
